@@ -9,7 +9,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/style.css" />
-    <script type="module" src="js/utilities/progress_bar.js"></script>
+    <script type="module" src="js/main.js"></script>
     <title>Code Corner</title>
   </head>
   <body>
@@ -130,7 +130,8 @@
       </article>
       <section class="blog-content-breakdown">
         <h1>Blog Content Breakdown</h1>
-        <ul class="tags-list">
+        <div id="loadingIndicator">Loading...</div>
+        <ul class="tags-list" hidden>
           <li class="tag-progress" data-id="Beginner">
             <div class="tag-span">
               <div class="tag beginner">

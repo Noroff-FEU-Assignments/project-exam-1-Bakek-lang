@@ -12,5 +12,3 @@ export async function makeApiCall() {
 
   return data;
 }
-
-makeApiCall();

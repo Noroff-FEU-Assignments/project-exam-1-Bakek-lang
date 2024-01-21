@@ -136,6 +136,7 @@ nav ul li a:hover {
 .about-page {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .about-article h1 {
@@ -237,4 +238,20 @@ nav ul li a:hover {
 .design {
   background-color: #008080;
   color: #fff;
+}
+
+.python {
+  background-color: #9370db;
+  color: #000;
+}
+
+@media (max-width: 700px) {
+  .about-article,
+  .blog-content-breakdown {
+    width: 100%;
+  }
+
+  .blog-content-breakdown {
+    order: -1;
+  }
 }
