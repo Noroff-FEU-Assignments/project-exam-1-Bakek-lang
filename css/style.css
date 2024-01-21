@@ -136,12 +136,11 @@ nav ul li a:hover {
 .about-page {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  gap: 50px;
 }
 
 .about-article h1 {
   justify-content: start;
-  font-size: 2.1rem;
 }
 
 .about-article {
@@ -153,10 +152,15 @@ nav ul li a:hover {
   width: 40%;
 }
 
+section h1 {
+  font-size: 1.7rem;
+}
+
 /* blog content breakdown */
 
 .tags-list {
   list-style: none;
+  padding: 0;
 }
 
 .tag-progress {
@@ -245,6 +249,56 @@ nav ul li a:hover {
   color: #000;
 }
 
+/* books & tools */
+
+.post-card {
+  width: 333px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px 0px #000;
+  background-color: #fff;
+}
+
+.author-image {
+  width: 33px;
+  height: 33px;
+  border-radius: 55px;
+}
+
+.post-image-card {
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.author-information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+
+.line {
+  border-right: solid 1px #000;
+  padding-right: 15px;
+}
+
+.tag-posts {
+  margin-left: 10px;
+}
+
+.post-card h3 {
+  margin-left: 10px;
+  font-size: 20px;
+  width: 306px;
+}
+
+.post-card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 70px;
+}
+
 @media (max-width: 700px) {
   .about-article,
   .blog-content-breakdown {
@@ -253,5 +307,9 @@ nav ul li a:hover {
 
   .blog-content-breakdown {
     order: -1;
+  }
+
+  .about-page {
+    flex-wrap: wrap;
   }
 }

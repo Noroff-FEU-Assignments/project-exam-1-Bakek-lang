@@ -9,6 +9,8 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/renderHTML/render_posts.js"></script>
     <title>Code Corner</title>
   </head>
   <body>
@@ -41,7 +43,24 @@
         </nav>
       </div>
     </header>
-    <main><h1>Hello and Welcome to Books & Tools</h1></main>
+    <main>
+      <h1>Books & Tools</h1>
+      <section class="post-card-container">
+        <div class="post-card">
+          <img class="post-image-card" src="images/logo.svg" alt="logo" />
+
+          <div class="tag tool tag-posts">
+            <span class="tag-name">Tool</span>
+          </div>
+          <h3>Unlocking the Power of Git: A Review of 'Pro Git'</h3>
+          <div class="author-information">
+            <img class="author-image" src="images/logo.svg" alt="logo" />
+            <span class="line">Matt Corner</span>
+            <span>January 10 2024</span>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer>
       <div class="container container-footer">
         <img src="images/logo.svg" alt="Code Corner Logo" />
