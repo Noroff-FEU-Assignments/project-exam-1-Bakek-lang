@@ -279,9 +279,13 @@ section h1 {
 }
 
 .post-card h3 {
+  margin: 0;
   margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 5px;
   font-size: 20px;
   width: 306px;
+  height: 103px;
 }
 
 .post-card-container {
@@ -290,7 +294,6 @@ section h1 {
   flex-wrap: wrap;
   gap: 60px 35px;
   margin-bottom: 50px;
-  justify-content: flex-end;
 }
 
 .post-image-container {
@@ -302,7 +305,6 @@ section h1 {
 .book-background {
   width: 100%;
   height: 100%;
-  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.ingramspark.com%2Fhs-fs%2Fhubfs%2FTheSumofAllThings_cover_June21_option4(1).jpg%3Fwidth%3D1125%26name%3DTheSumofAllThings_cover_June21_option4(1).jpg&f=1&nofb=1&ipt=63a1eab3ad2b5823d6e78ca14707f2c2acf3fd396d059e0c74c1f4e1aa3fca90&ipo=images");
   background-repeat: repeat;
   background-size: 6.6%;
   border-radius: 5px 5px 0px 0px;
@@ -323,6 +325,66 @@ section h1 {
 .post-image-card-tool {
   width: 333px;
   border-radius: 5px 5px 0px 0px;
+}
+
+/* Post specific */
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  max-width: 905px;
+}
+
+.div-tag-post {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.post-container h1 {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.post-container h3 {
+  font-size: 20px;
+  color: #737373;
+  font-weight: 400;
+}
+
+.wide-image {
+  max-width: 905px;
+  border-radius: 5px;
+}
+
+.paragraph-content {
+  font-size: 24px;
+}
+
+.paragraph-title {
+  font-size: 28px;
+}
+
+.post-specific-image-container {
+  position: relative;
+  width: 100%;
+  height: 450px;
+}
+
+.link-container {
+  display: flex;
+  font-size: 28px;
+  gap: 20px;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.link-container a {
+  color: blue;
+  text-decoration: underline;
 }
 
 /* Media */
