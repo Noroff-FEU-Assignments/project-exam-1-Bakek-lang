@@ -292,9 +292,9 @@ section h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 50px 25px;
+  gap: 50px 5px;
   margin-bottom: 50px;
-  max-width: 1050px;
+  max-width: 1009px;
 }
 
 .post-image-container {
@@ -446,7 +446,41 @@ section h1 {
 
 #sort-options {
   padding: 8px 12px;
+  cursor: pointer;
 }
+
+/* tag-sorting books&tools page */
+
+.content-area {
+  display: flex;
+  gap: 10px;
+}
+
+.sidebar {
+  flex: 1;
+  margin-top: 50px;
+}
+
+.posts-container {
+  flex: 9;
+}
+
+.tag-item {
+  display: flex;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.tag-item input {
+  cursor: pointer;
+}
+
+/* Dont know yet how to fix this on the responsive part */
+/* .tags-list-check {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+} */
 
 /* Media */
 

@@ -2,7 +2,11 @@
 
 // let data = await makeApiCall();
 
-import { getInitialPosts, getRemainingPosts } from "../data/data.js";
+import {
+  filterPostsByTags,
+  getInitialPosts,
+  getRemainingPosts,
+} from "../data/data.js";
 import { sortPosts } from "../data/data.js";
 
 let data = getInitialPosts();
@@ -131,5 +135,22 @@ function clearContainer() {
   container.innerHTML = "";
 }
 
+function getSelectedTags() {
+  return Array.from(document.querySelectorAll(".tag-check:checked")).map(
+    (cb) => cb.value
+  );
+}
+
+function sortCategories() {
+  document.querySelectorAll(".tag-check").forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+      const selectedTags = getSelectedTags();
+      const filteredPosts = filterPostsByTags(selectedTags);
+      renderPosts(filteredPosts);
+    });
+  });
+}
+
 startContent();
 sortOptions();
+sortCategories();

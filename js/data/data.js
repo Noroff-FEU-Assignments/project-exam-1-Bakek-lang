@@ -26,3 +26,14 @@ export function sortPosts(criteria) {
     );
   }
 }
+
+// filtering for tags
+
+export function filterPostsByTags(selectedTags) {
+  if (selectedTags.length === 0) {
+    return [...allPosts];
+  }
+  return currentPosts.filter((post) =>
+    selectedTags.some((tag) => post.category_names.includes(tag))
+  );
+}

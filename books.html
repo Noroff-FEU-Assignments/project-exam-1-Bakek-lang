@@ -46,22 +46,81 @@
     </header>
     <main>
       <h1>Books & Tools</h1>
-      <div class="posts-container">
-        <div class="sort-and-posts">
-          <div class="sort-container">
-            <select style="display: none" id="sort-options">
-              <option value="AtoZ">A-Z</option>
-              <option value="ZtoA">Z-A</option>
-              <option value="NewestToOldest">Newest to Oldest</option>
-              <option value="OldestToNewest">Oldest to Newest</option>
-            </select>
+      <div class="content-area">
+        <aside class="sidebar">
+          <div class="tags-header">
+            <i class="fa-solid fa-tags"></i>
+            <span>Tags</span>
           </div>
-          <section class="post-card-container"></section>
-        </div>
+          <div class="tags-list-check">
+            <label class="tag-item">
+              <input type="checkbox" value="book" class="tag-check" />
+              <div class="tag book">
+                <span class="tag-name">Book</span>
+              </div>
+            </label>
+            <label class="tag-item">
+              <input type="checkbox" value="tool" class="tag-check" />
+              <div class="tag tool">
+                <span class="tag-name">Tool</span>
+              </div>
+            </label>
+            <label class="tag-item">
+              <input type="checkbox" value="beginner" class="tag-check" />
+              <div class="tag beginner">
+                <span class="tag-name">Beginner</span>
+              </div>
+            </label>
+            <label class="tag-item">
+              <input type="checkbox" value="advanced" class="tag-check" />
+              <div class="tag advanced">
+                <span class="tag-name">Advanced</span>
+              </div>
+            </label>
+            <label class="tag-item">
+              <input type="checkbox" value="javascript" class="tag-check" />
+              <div class="tag javascript">
+                <span class="tag-name">JavaScript</span>
+              </div>
+            </label>
+            <label class="tag-item">
+              <input type="checkbox" value="python" class="tag-check" />
+              <div class="tag python">
+                <span class="tag-name">Python</span>
+              </div>
+            </label>
+            <label class="tag-item">
+              <input type="checkbox" value="css-html" class="tag-check" />
+              <div class="tag css-html">
+                <span class="tag-name">CSS/HTML</span>
+              </div>
+            </label>
+            <label class="tag-item">
+              <input type="checkbox" value="design" class="tag-check" />
+              <div class="tag design">
+                <span class="tag-name">Design</span>
+              </div>
+            </label>
+          </div>
+        </aside>
 
-        <button class="view-more" id="view-more" style="display: none">
-          View More
-        </button>
+        <div class="posts-container">
+          <div class="sort-and-posts">
+            <div class="sort-container">
+              <select style="display: none" id="sort-options">
+                <option value="AtoZ">A-Z</option>
+                <option value="ZtoA">Z-A</option>
+                <option value="NewestToOldest">Newest to Oldest</option>
+                <option value="OldestToNewest">Oldest to Newest</option>
+              </select>
+            </div>
+            <section class="post-card-container"></section>
+          </div>
+
+          <button class="view-more" id="view-more" style="display: none">
+            View More
+          </button>
+        </div>
       </div>
     </main>
     <footer>
