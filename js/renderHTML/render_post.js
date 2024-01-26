@@ -24,8 +24,10 @@ function renderPost(data) {
   postContainer.append(divTag);
 
   for (let i = 0; i < data.category_names.length; i++) {
+    // just to fix the css/html problem
+    let categoryName = data.category_names[i].replace(/\//g, "-");
     const divEachTag = document.createElement("div");
-    divEachTag.className = `tag ${data.category_names[i].toLowerCase()}`;
+    divEachTag.className = `tag ${categoryName.toLowerCase()}`;
     divTag.append(divEachTag);
 
     const tagName = document.createElement("span");
@@ -38,7 +40,8 @@ function renderPost(data) {
   heading.textContent = data.acf.heading;
   postContainer.append(heading);
 
-  const subheading = document.createElement("h3");
+  const subheading = document.createElement("h2");
+  subheading.className = "subheading";
   subheading.textContent = data.acf.subheading;
   postContainer.append(subheading);
 

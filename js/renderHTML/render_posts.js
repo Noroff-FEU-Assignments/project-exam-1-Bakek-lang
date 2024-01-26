@@ -1,38 +1,11 @@
-import { makeApiCall } from "../data/fetch.js";
+// import { makeApiCall } from "../data/fetch.js";
 
-let data = await makeApiCall();
+// let data = await makeApiCall();
 
-// function renderPosts1(data) {
-//   const container = document.querySelector(".post-card-container");
+import { getInitialPosts, getRemainingPosts } from "../data/data.js";
+import { sortPosts } from "../data/data.js";
 
-//   for (let i = 0; i < data.length; i++) {
-//     if (data[i].category_names[0] === "Tool") {
-//       container.innerHTML += `
-//       <div class="post-card">
-//             <img class="post-image-card" src="${
-//               data[i].acf.review_image
-//             }" alt="review image" />
-
-//             <div class="tag ${data[
-//               i
-//             ].category_names[0].toLowerCase()} tag-posts">
-//               <span class="tag-name">${data[i].category_names[0]}</span>
-//             </div>
-//             <h3>${data[i].acf.heading}</h3>
-//             <div class="author-information">
-//               <img class="author-image" src="${
-//                 data[i].acf.author_image
-//               }" alt="author image" />
-//               <span class="line">Matt Corner</span>
-//               <span>${data[i].acf.date_of_post}</span>
-//             </div>
-//           </div>
-//       `;
-//     }
-//   }
-// }
-
-// renderPosts(data);
+let data = getInitialPosts();
 
 function renderPosts(data) {
   const postCardContainer = document.querySelector(".post-card-container");
@@ -112,4 +85,51 @@ function renderPosts(data) {
   postCardContainer.append(fragment);
 }
 
-renderPosts(data);
+// renderPosts(data);
+let viewMoreEventAdded = false;
+
+function viewMoreButton() {
+  const viewMore = document.getElementById("view-more");
+  viewMore.style.display = "block";
+
+  if (!viewMoreEventAdded) {
+    viewMore.addEventListener("click", function () {
+      let rest = getRemainingPosts();
+      renderPosts(rest);
+      viewMore.style.display = "none";
+    });
+    viewMoreEventAdded = true;
+  }
+}
+
+function sortOptions() {
+  const sortOptions = document.getElementById("sort-options");
+  sortOptions.style.display = "block";
+  sortOptions.addEventListener("change", (event) => {
+    localStorage.setItem("lastSortOption", event.target.value);
+    clearContainer();
+    sortPosts(event.target.value);
+    let posts = getInitialPosts();
+    renderPosts(posts);
+    viewMoreButton();
+  });
+}
+
+function startContent() {
+  let lastSortOption = localStorage.getItem("lastSortOption") || "AtoZ";
+
+  const sortOptions = document.getElementById("sort-options");
+  sortOptions.value = lastSortOption;
+  sortPosts(lastSortOption);
+  let posts = getInitialPosts();
+  renderPosts(posts);
+  viewMoreButton();
+}
+
+function clearContainer() {
+  const container = document.querySelector(".post-card-container");
+  container.innerHTML = "";
+}
+
+startContent();
+sortOptions();
