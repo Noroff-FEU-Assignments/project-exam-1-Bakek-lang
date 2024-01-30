@@ -1,5 +1,5 @@
 const url =
-  "http://code-corner.henrikbakke.no/wp-json/wp/v2/posts?acf_format=standard&per_page=20";
+  "http://code-corner.henrikbakke.no/wp-json/wp/v2/posts?acf_format=standard&per_page=25";
 
 export async function makeApiCall() {
   const response = await fetch(url);
