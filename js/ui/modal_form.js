@@ -27,7 +27,7 @@ function modalSuccess() {
 //     }
 //   });
 // }
-export function showModal(options) {
+export function showModal(options, success = true) {
   const body = document.body;
   body.classList.add("freeze-screen");
   const modalOverlay = document.createElement("div");
@@ -58,12 +58,55 @@ export function showModal(options) {
       modal.append(imageElement);
     }
   }
-  if (options.contentType === "author") {
-    modal.classList.add("height-adjustment");
-    const authorImage = document.createElement("img");
-    authorImage.className = "modal-image";
-    authorImage.src = options.imgSrc;
-    modal.append(authorImage);
+
+  if (options.contentType === "text") {
+    // Success modal after contact form
+    modal.classList.add("form-modal");
+
+    const successDiv = document.createElement("div");
+    successDiv.className = "submit-modal";
+    modal.append(successDiv);
+
+    const icon = document.createElement("i");
+    icon.className = success
+      ? "fa-solid fa-check checkmark"
+      : "fa-solid fa-xmark crossmark";
+    successDiv.append(icon);
+
+    const h2 = document.createElement("h2");
+    h2.textContent = success
+      ? "Your submission has been succesful!"
+      : "Oops! Something Went Wrong";
+    successDiv.append(h2);
+
+    const h3 = document.createElement("h3");
+    h3.textContent = `Hey ${options.name}`;
+    successDiv.append(h3);
+
+    const paragraph = document.createElement("p");
+    paragraph.textContent = success
+      ? `I'm grateful you've connected with Code Corner. Your time and effort in reaching out are highly valued. Feel free to keep exploring the variety of posts at Code Corner.`
+      : "There was a problem processing your request. Please try again later. Thank you for your understanding.";
+    successDiv.append(paragraph);
+
+    const buttonDiv = document.createElement("div");
+    buttonDiv.className = "buttons-modal";
+    successDiv.append(buttonDiv);
+
+    const homeButton = document.createElement("a");
+    homeButton.className = success
+      ? "home-button modal-button"
+      : "home-button buttonsOnError";
+    homeButton.textContent = "Home";
+    homeButton.href = "/index.html";
+
+    const browseButton = document.createElement("a");
+    browseButton.className = success
+      ? "browse-button modal-button"
+      : "browse-button buttonsOnError";
+    browseButton.textContent = "Browse";
+    browseButton.href = "/books.html";
+    buttonDiv.append(homeButton, browseButton);
   }
 
   modalOverlay.style.display = "block";

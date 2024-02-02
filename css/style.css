@@ -627,7 +627,8 @@ textarea::placeholder {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 50%;
+  /* max-width: 50%; */
+  max-width: 1150px;
   max-height: 60%;
 
   background: white;
@@ -663,10 +664,6 @@ textarea::placeholder {
   align-self: center;
 }
 
-.author-card-image {
-  cursor: pointer;
-}
-
 .freeze-screen {
   overflow: hidden;
   height: 100%;
@@ -675,6 +672,103 @@ textarea::placeholder {
 .height-adjustment {
   height: 100%;
 }
+
+/* success modal */
+.checkmark {
+  color: #4caf50;
+  font-size: 10rem;
+}
+
+.crossmark {
+  color: red;
+  font-size: 10rem;
+}
+
+.submit-modal h2,
+.submit-modal h3,
+.submit-modal p {
+  margin: 0;
+}
+
+.form-modal {
+  justify-content: center;
+  max-height: 70%;
+}
+
+.submit-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50%;
+  text-align: center;
+  gap: 20px;
+}
+
+.submit-modal h2 {
+  font-size: 2rem;
+}
+
+.submit-modal h3 {
+  font-size: 1.5rem;
+}
+
+.submit-modal p {
+  font-size: 1rem;
+}
+
+.buttons-modal {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.home-button,
+.browse-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.75em 1.5em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover,
+.browse-button:hover {
+  background-color: #45a049;
+}
+
+.buttonsOnError {
+  background-color: #0047ab;
+}
+
+.buttonsOnError:hover {
+  background-color: #0047ab;
+  opacity: 0.8;
+}
+
+/* .modal-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.home-button {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.browse-button {
+  background-color: #008cba;
+  color: #fff;
+} */
+
+/* border-radius: 10px;
+  background-color: #0056b3;
+  color: #fff;
+  font-size: 26px;
+  padding: 10px 20px;
+  cursor: pointer;
+} */
 
 /* Dont know yet how to fix this on the responsive part */
 /* .tags-list-check {

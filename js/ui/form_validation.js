@@ -1,3 +1,4 @@
+import { submitForm } from "../data/contactPOST.js";
 import { showModal } from "./modal_form.js";
 
 function showError(inputElement, message) {
@@ -73,12 +74,11 @@ function checkContactForm(event) {
   const messageCheck = checkContactMessage();
 
   if (!nameCheck || !emailCheck || !subjectCheck || !messageCheck) {
+    console.error("Her mangler du noe");
     event.preventDefault();
-    console.error("hva skjer nå");
-    return;
+    return false;
   }
-  event.preventDefault();
-  showModal("image", "images/author.webp");
+  return true;
 }
 
 document.getElementById("name").addEventListener("blur", checkContactName);
@@ -92,15 +92,22 @@ document
 
 const contactForm = document.getElementById("contactForm");
 
-contactForm.addEventListener("submit", checkContactForm);
+contactForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  if (checkContactForm(event)) {
+    const nameValue = document.getElementById("name").value;
+    const emailValue = document.getElementById("email").value;
+    const subjectValue = document.getElementById("subject").value;
+    const messageValue = document.getElementById("message").value;
+    console.log(nameValue, emailValue, subjectValue, messageValue);
+    submitForm(nameValue, emailValue, subjectValue, messageValue);
+  }
+});
 
-// document.querySelector(".modal-overlay").addEventListener("click", hideModal);
+const testModal = document.querySelector(".test-modal");
 
-const authorImage = document.querySelector(".author-card-image");
-
-authorImage.addEventListener("click", function () {
+testModal.addEventListener("click", function () {
   showModal({
-    contentType: "author",
-    imgSrc: authorImage.src,
+    contentType: "text",
   });
 });
