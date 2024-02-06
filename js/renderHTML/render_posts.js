@@ -3,11 +3,13 @@
 // let data = await makeApiCall();
 
 import {
+  currentPosts,
   filterPostsByTags,
   getInitialPosts,
   getRemainingPosts,
 } from "../data/data.js";
 import { sortPosts } from "../data/data.js";
+import { filteringTags } from "../data/filteringSystem.js";
 
 let data = getInitialPosts();
 
@@ -94,7 +96,22 @@ let viewMoreEventAdded = false;
 
 function viewMoreButton() {
   const viewMore = document.getElementById("view-more");
-  viewMore.style.display = "block";
+  const allPostsCount = currentPosts.length;
+
+  const displayedPostCount = document.querySelectorAll(".post-card").length;
+
+  console.log(
+    "This is allPostsCount: ",
+    allPostsCount,
+    "And this is the displayedPostCount: ",
+    displayedPostCount
+  );
+
+  if (displayedPostCount < allPostsCount) {
+    viewMore.style.display = "block";
+  } else {
+    viewMore.style.display = "none";
+  }
 
   if (!viewMoreEventAdded) {
     viewMore.addEventListener("click", function () {
@@ -125,9 +142,8 @@ function startContent() {
   const sortOptions = document.getElementById("sort-options");
   sortOptions.value = lastSortOption;
   sortPosts(lastSortOption);
-  let posts = getInitialPosts();
-  renderPosts(posts);
-  viewMoreButton();
+
+  updatePostsByTags();
 }
 
 function clearContainer() {
@@ -135,22 +151,42 @@ function clearContainer() {
   container.innerHTML = "";
 }
 
-function getSelectedTags() {
-  return Array.from(document.querySelectorAll(".tag-check:checked")).map(
-    (cb) => cb.value
-  );
-}
-
-function sortCategories() {
-  document.querySelectorAll(".tag-check").forEach((checkbox) => {
-    checkbox.addEventListener("change", () => {
-      const selectedTags = getSelectedTags();
-      const filteredPosts = filterPostsByTags(selectedTags);
-      renderPosts(filteredPosts);
-    });
-  });
-}
-
 startContent();
 sortOptions();
-sortCategories();
+
+function updatePostsByTags() {
+  let selectedTags = [];
+  console.log("SelectedTags typeof: ", typeof selectedTags);
+  let checkboxes = document.querySelectorAll(".tag-check");
+  for (let i = 0; i < checkboxes.length; i++) {
+    if (checkboxes[i].checked) {
+      console.log(checkboxes[0]);
+      selectedTags.push(checkboxes[i].value);
+    }
+  }
+
+  filterPostsByTags(selectedTags);
+
+  let sortCriteria = localStorage.getItem("lastSortOption") || "AtoZ";
+  sortPosts(sortCriteria);
+
+  let postsToShow = getInitialPosts();
+  console.log("This is postsToShow: ", postsToShow);
+  console.log("this is postsToShow: ", postsToShow);
+
+  renderPosts(postsToShow);
+  viewMoreButton();
+}
+
+function onTagChange() {
+  updatePostsByTags();
+}
+
+let checkboxes = document.querySelectorAll(".tag-check");
+
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener("change", function () {
+    clearContainer();
+    onTagChange();
+  });
+});

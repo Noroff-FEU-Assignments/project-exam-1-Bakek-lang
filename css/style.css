@@ -248,7 +248,7 @@ section h1 {
 /* books & tools */
 
 .post-card {
-  width: 333px;
+  width: 325px;
   border-radius: 5px;
   box-shadow: 0px 2px 2px 0px #000;
   background-color: #fff;
@@ -263,9 +263,13 @@ section h1 {
 .author-information {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 15px;
   padding-bottom: 10px;
+  margin-left: 10px;
+}
+
+.subheading + .author-information {
+  margin: 0;
 }
 
 .line {
@@ -292,14 +296,14 @@ section h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 50px 5px;
+  gap: 30px 15px;
   margin-bottom: 50px;
   max-width: 1009px;
 }
 
 .post-image-container {
   position: relative;
-  width: 333px;
+  width: 325px;
   height: 168px;
 }
 
@@ -328,7 +332,7 @@ section h1 {
 }
 
 .post-image-card-tool {
-  width: 333px;
+  width: 325px;
   border-radius: 5px 5px 0px 0px;
   height: 168px;
 }
@@ -466,11 +470,14 @@ section h1 {
 .content-area {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .sidebar {
   flex: 1;
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
 }
 
 .posts-container {
@@ -806,5 +813,16 @@ textarea::placeholder {
 
   .author-card img {
     width: 135px;
+  }
+
+  /* tag / category bar */
+  .sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .tags-list-check {
+    display: flex;
+    flex-wrap: wrap;
   }
 }

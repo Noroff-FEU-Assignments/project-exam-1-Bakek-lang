@@ -1,7 +1,8 @@
 import { makeApiCall } from "./fetch.js";
 
 let allPosts = await makeApiCall();
-let currentPosts = [...allPosts];
+let originalPosts = [...allPosts];
+export let currentPosts = [...allPosts];
 
 export function getInitialPosts() {
   return currentPosts.slice(0, 12);
@@ -27,13 +28,48 @@ export function sortPosts(criteria) {
   }
 }
 
-// filtering for tags
-
 export function filterPostsByTags(selectedTags) {
-  if (selectedTags.length === 0) {
-    return [...allPosts];
+  currentPosts = originalPosts;
+  if (selectedTags.length > 0) {
+    let filteredPosts = [];
+    for (let i = 0; i < currentPosts.length; i++) {
+      let post = currentPosts[i];
+
+      for (let j = 0; j < post.category_names.length; j++) {
+        let postTag = post.category_names[j].toLowerCase();
+
+        if (
+          selectedTags.indexOf(postTag) > -1 &&
+          filteredPosts.indexOf(post) === -1
+        ) {
+          filteredPosts.push(post);
+        }
+      }
+    }
+    console.log("this is filteredPosts now: ", filteredPosts);
+    currentPosts = filteredPosts;
   }
-  return currentPosts.filter((post) =>
-    selectedTags.some((tag) => post.category_names.includes(tag))
-  );
 }
+// export function filterPostsByTags(selectedTags) {
+//   if (selectedTags.length === 0) {
+//     currentPosts = originalPosts;
+//   } else {
+//     let filteredPosts = [];
+//     for (let i = 0; i < currentPosts.length; i++) {
+//       let post = currentPosts[i];
+
+//       for (let j = 0; j < post.category_names.length; j++) {
+//         let postTag = post.category_names[j].toLowerCase();
+
+//         if (
+//           selectedTags.indexOf(postTag) > -1 &&
+//           filteredPosts.indexOf(post) === -1
+//         ) {
+//           filteredPosts.push(post);
+//         }
+//       }
+//     }
+//     console.log("this is filteredPosts now: ", filteredPosts);
+//     currentPosts = filteredPosts;
+//   }
+// }

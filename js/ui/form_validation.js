@@ -103,11 +103,3 @@ contactForm.addEventListener("submit", function (event) {
     submitForm(nameValue, emailValue, subjectValue, messageValue);
   }
 });
-
-const testModal = document.querySelector(".test-modal");
-
-testModal.addEventListener("click", function () {
-  showModal({
-    contentType: "text",
-  });
-});
