@@ -50,26 +50,3 @@ export function filterPostsByTags(selectedTags) {
     currentPosts = filteredPosts;
   }
 }
-// export function filterPostsByTags(selectedTags) {
-//   if (selectedTags.length === 0) {
-//     currentPosts = originalPosts;
-//   } else {
-//     let filteredPosts = [];
-//     for (let i = 0; i < currentPosts.length; i++) {
-//       let post = currentPosts[i];
-
-//       for (let j = 0; j < post.category_names.length; j++) {
-//         let postTag = post.category_names[j].toLowerCase();
-
-//         if (
-//           selectedTags.indexOf(postTag) > -1 &&
-//           filteredPosts.indexOf(post) === -1
-//         ) {
-//           filteredPosts.push(post);
-//         }
-//       }
-//     }
-//     console.log("this is filteredPosts now: ", filteredPosts);
-//     currentPosts = filteredPosts;
-//   }
-// }

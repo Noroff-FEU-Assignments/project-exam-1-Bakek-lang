@@ -9,9 +9,6 @@ import {
   getRemainingPosts,
 } from "../data/data.js";
 import { sortPosts } from "../data/data.js";
-import { filteringTags } from "../data/filteringSystem.js";
-
-let data = getInitialPosts();
 
 function renderPosts(data) {
   const postCardContainer = document.querySelector(".post-card-container");
