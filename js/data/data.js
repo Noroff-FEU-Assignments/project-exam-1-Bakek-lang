@@ -12,6 +12,14 @@ export function getRemainingPosts() {
   return currentPosts.slice(12);
 }
 
+export function postsForCarousel() {
+  let posts = [...allPosts];
+  posts.sort(
+    (a, b) => new Date(b.acf.date_of_post) - new Date(a.acf.date_of_post)
+  );
+  return posts.slice(0, 12);
+}
+
 export function sortPosts(criteria) {
   if (criteria === "AtoZ") {
     currentPosts.sort((a, b) => a.acf.heading.localeCompare(b.acf.heading));

@@ -1,4 +1,5 @@
 import { makeApiCall } from "../data/fetch.js";
+import { loadingIndicatorOff } from "../ui/loading_indicator.js";
 import { showModal } from "../ui/modal_form.js";
 
 let data = await makeApiCall();
@@ -160,7 +161,7 @@ function renderPost(data) {
   titleLink.href = data.acf.original_url;
   linkContainer.append(titleLink);
 }
-
+loadingIndicatorOff();
 renderPost(postData);
 
 const image = document.querySelector(".wide-image");

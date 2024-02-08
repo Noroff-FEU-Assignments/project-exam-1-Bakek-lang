@@ -194,7 +194,7 @@ section h1 {
 }
 
 .tag {
-  width: 80px;
+  width: 84px;
   padding: 3px 6px;
   border-radius: 5px;
   text-align: center;
@@ -368,7 +368,6 @@ section h1 {
 .wide-image {
   border-radius: 5px;
   width: 100%;
-  height: 100%;
   box-shadow: 0px 2px 2px 0px black;
   cursor: pointer;
 }
@@ -754,35 +753,168 @@ textarea::placeholder {
   opacity: 0.8;
 }
 
-/* .modal-button {
-  padding: 10px 20px;
+/* Home page stuff */
+
+.authors-corner {
+  display: flex;
+  gap: 42px;
+  flex-wrap: wrap;
+}
+
+.authors-corner-layout {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.img-text-layout {
+  background-color: #a3cef1;
+  color: #333;
+}
+
+.text-img-layout {
+  background-color: #a8d5ba;
+  color: #333;
+}
+
+.text-img-layout {
+  flex-direction: row-reverse;
+}
+
+.authors-corner-info img {
+  max-width: 200px;
   border-radius: 5px;
 }
 
-.home-button {
-  background-color: #4caf50;
-  color: #fff;
+.authors-corner-layout p {
+  flex: 1;
+  margin: 0px 20px;
 }
 
-.browse-button {
-  background-color: #008cba;
-  color: #fff;
-} */
-
-/* border-radius: 10px;
-  background-color: #0056b3;
-  color: #fff;
-  font-size: 26px;
-  padding: 10px 20px;
-  cursor: pointer;
-} */
-
-/* Dont know yet how to fix this on the responsive part */
-/* .tags-list-check {
+.behind-the-scenes-card {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-} */
+  align-items: center;
+  max-width: 100%;
+}
+
+.scenes-img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.home-h1 {
+  justify-content: flex-start;
+}
+
+.behind-the-scenes h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.behind-the-scenes .author-information {
+  margin-left: 0;
+}
+
+.behind-the-scenes-card h3 {
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.behind-the-scenes {
+  flex-basis: 40%;
+}
+
+.authors-corner-info {
+  flex: 1;
+}
+
+.behind-bg {
+  background-image: url(/images/progit2.png);
+}
+
+.behind-img {
+  width: 100%;
+  border: solid black;
+}
+
+/* carousel */
+.carousel-home-container {
+  position: relative;
+}
+
+.carousel-home {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+  margin-left: 80px;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel-prev {
+  left: 0;
+}
+
+.carousel-next {
+  right: 0;
+}
+
+/* loading indicator */
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #000000;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #000000 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 /* Media */
 
@@ -824,5 +956,11 @@ textarea::placeholder {
   .tags-list-check {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .authors-corner-info,
+  .behind-the-scenes {
+    max-width: 100%;
+    flex-basis: 100%;
   }
 }

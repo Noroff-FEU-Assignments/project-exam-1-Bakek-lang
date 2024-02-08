@@ -9,8 +9,9 @@ import {
   getRemainingPosts,
 } from "../data/data.js";
 import { sortPosts } from "../data/data.js";
+import { loadingIndicatorOff } from "../ui/loading_indicator.js";
 
-function renderPosts(data) {
+export function renderPosts(data) {
   const postCardContainer = document.querySelector(".post-card-container");
   const fragment = document.createDocumentFragment();
 
@@ -141,6 +142,7 @@ function startContent() {
   sortPosts(lastSortOption);
 
   updatePostsByTags();
+  loadingIndicatorOff();
 }
 
 function clearContainer() {
