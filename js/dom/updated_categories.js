@@ -8,7 +8,9 @@ import { implementUpdatedCategoryData } from "./category_dom_updater.js";
 
 export async function updateCategoriesDOM() {
   try {
+    console.log("du har ikke kommet forbi makeapicall");
     const category_data = await makeApiCall();
+    console.log("Du har kommet forbi makeapicall");
     let sortedCategoriesCount = creatingCategoryCounter(category_data);
     implementUpdatedCategoryData(sortedCategoriesCount);
     loadingIndicatorOff();
@@ -16,6 +18,7 @@ export async function updateCategoriesDOM() {
     tagList.removeAttribute("hidden");
     animatedBars();
   } catch (error) {
+    console.log("Erroren ble catchet");
     console.error("Error fetching data: ", error);
     loadingIndicatorOff();
     const tagList = document.querySelector(".tags-list");

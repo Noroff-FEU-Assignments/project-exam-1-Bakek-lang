@@ -8,8 +8,10 @@ import { loadingIndicatorOff } from "./ui/loading_indicator.js";
 
 const url = window.location.href;
 let data = onlyBooks();
+console.log("denne går?");
 
 if (url.includes("about")) {
+  console.log("denne går");
   updateCategoriesDOM();
 }
 if (url.includes("books")) {
@@ -17,6 +19,7 @@ if (url.includes("books")) {
   sortOptions();
 }
 if (url.includes("post")) {
+  console.log("jeg hater safari main.js");
   handlePostPage();
 }
 if (url.includes("behind")) {
