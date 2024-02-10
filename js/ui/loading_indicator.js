@@ -1,4 +1,6 @@
 export function loadingIndicatorOff() {
-  const loadingIndicator = document.querySelector(".lds-ring");
-  loadingIndicator.style.display = "none";
+  const loadingIndicator = document.querySelectorAll(".lds-ring");
+  loadingIndicator.forEach(function (i) {
+    i.style.display = "none";
+  });
 }

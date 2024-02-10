@@ -20,6 +20,17 @@ export function postsForCarousel() {
   return posts.slice(0, 12);
 }
 
+export function onlyBooks() {
+  let posts = [...allPosts];
+  let bookPosts = [];
+  for (let i = 0; i < posts.length; i++) {
+    if (posts[i].category_names[0] === "Book") {
+      bookPosts.push(posts[i]);
+    }
+  }
+  return bookPosts;
+}
+
 export function sortPosts(criteria) {
   if (criteria === "AtoZ") {
     currentPosts.sort((a, b) => a.acf.heading.localeCompare(b.acf.heading));

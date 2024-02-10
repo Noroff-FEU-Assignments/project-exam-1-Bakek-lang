@@ -121,7 +121,7 @@ function viewMoreButton() {
   }
 }
 
-function sortOptions() {
+export function sortOptions() {
   const sortOptions = document.getElementById("sort-options");
   sortOptions.style.display = "block";
   sortOptions.addEventListener("change", (event) => {
@@ -134,7 +134,7 @@ function sortOptions() {
   });
 }
 
-function startContent() {
+export function startContent() {
   let lastSortOption = localStorage.getItem("lastSortOption") || "AtoZ";
 
   const sortOptions = document.getElementById("sort-options");
@@ -145,13 +145,10 @@ function startContent() {
   loadingIndicatorOff();
 }
 
-function clearContainer() {
+export function clearContainer() {
   const container = document.querySelector(".post-card-container");
   container.innerHTML = "";
 }
-
-startContent();
-sortOptions();
 
 function updatePostsByTags() {
   let selectedTags = [];

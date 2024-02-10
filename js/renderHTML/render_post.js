@@ -1,8 +1,12 @@
+import { onlyBooks } from "../data/data.js";
 import { makeApiCall } from "../data/fetch.js";
 import { loadingIndicatorOff } from "../ui/loading_indicator.js";
 import { showModal } from "../ui/modal_form.js";
+import { renderDiscoverMore } from "./render_discover_more.js";
 
-let data = await makeApiCall();
+async function fetchData() {
+  return await makeApiCall();
+}
 
 function findCorrectPost(data) {
   const queryString = document.location.search;
@@ -15,8 +19,6 @@ function findCorrectPost(data) {
   console.log(matchingPost);
   return matchingPost;
 }
-
-let postData = findCorrectPost(data);
 
 function renderPost(data) {
   const postContainer = document.querySelector(".post-container");
@@ -161,24 +163,33 @@ function renderPost(data) {
   titleLink.href = data.acf.original_url;
   linkContainer.append(titleLink);
 }
-loadingIndicatorOff();
-renderPost(postData);
 
-const image = document.querySelector(".wide-image");
-const otherImage = document.querySelector(".post-image-card");
+export async function handlePostPage() {
+  const data = await fetchData();
+  const postData = await findCorrectPost(data);
+  renderPost(postData);
+  const onlyBooksData = onlyBooks();
+  renderDiscoverMore(onlyBooksData);
+  loadingIndicatorOff();
+}
 
-image.addEventListener("click", function () {
-  let element = image;
-  let imageSrc = image.src || otherImage.src;
-  console.log("this is the element: ", element);
-  console.log("this is the other image: ", otherImage);
+//  I NEED THIS FOR THE MODAL
 
-  if (image.classList.contains("book-background")) {
-    element = otherImage;
-  }
-  showModal({
-    contentType: "image",
-    element: image,
-    imageSrc: imageSrc,
-  });
-});
+// const image = document.querySelector(".wide-image");
+// const otherImage = document.querySelector(".post-image-card");
+
+// image.addEventListener("click", function () {
+//   let element = image;
+//   let imageSrc = image.src || otherImage.src;
+//   console.log("this is the element: ", element);
+//   console.log("this is the other image: ", otherImage);
+
+//   if (image.classList.contains("book-background")) {
+//     element = otherImage;
+//   }
+//   showModal({
+//     contentType: "image",
+//     element: image,
+//     imageSrc: imageSrc,
+//   });
+// });

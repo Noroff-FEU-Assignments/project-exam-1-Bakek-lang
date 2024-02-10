@@ -344,6 +344,7 @@ section h1 {
   flex-direction: column;
   align-items: start;
   max-width: 905px;
+  width: 100%;
 }
 
 .div-tag-post {
@@ -405,21 +406,6 @@ section h1 {
 
 .post-main {
   display: flex;
-}
-
-/* discover more aside */
-
-.discover-more-container img {
-  max-height: 180px;
-}
-
-.discover-more-container {
-  display: flex;
-  gap: 20px;
-}
-
-.discover-more-container h3 {
-  margin: 0;
 }
 
 /* view more button blogposts */
@@ -847,16 +833,24 @@ textarea::placeholder {
 
 /* carousel */
 .carousel-home-container {
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
 .carousel-home {
   display: flex;
+  overflow: hidden;
+  flex-direction: row;
   flex-wrap: nowrap;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  padding-bottom: 20px;
-  margin-left: 80px;
+  padding: 20px;
+}
+
+.post-card:last-child {
+  margin-right: 0;
 }
 
 .carousel-prev,
@@ -868,6 +862,7 @@ textarea::placeholder {
   border: 1px solid #ccc;
   padding: 10px;
   cursor: pointer;
+  font-size: 30px;
 }
 
 .carousel-prev {
@@ -878,8 +873,15 @@ textarea::placeholder {
   right: 0;
 }
 
-/* loading indicator */
+.latest-posts-h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
 
+/* loading indicator */
+/* got this from https://loading.io/css/ */
 .lds-ring {
   display: inline-block;
   position: relative;
@@ -914,6 +916,38 @@ textarea::placeholder {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* discover-more-aside stuff */
+
+.discover-more {
+  flex-shrink: 0;
+  width: 245px;
+  margin-left: 30px;
+}
+
+.dm-post {
+  display: flex;
+  margin-bottom: 42px;
+  width: 100%;
+}
+
+.dm-post img {
+  width: auto;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px 0px #000;
+  max-width: 84px;
+}
+
+.dm-post h3 {
+  margin-left: 10px;
+  margin-top: 0;
+  font-size: 15px;
+}
+
+.discover-more h2 {
+  text-align: center;
 }
 
 /* Media */

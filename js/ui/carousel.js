@@ -1,46 +1,40 @@
 import { postsForCarousel } from "../data/data.js";
-import { renderPosts } from "../renderHTML/render_posts.js";
+import { clearContainer, renderPosts } from "../renderHTML/render_posts.js";
+import { loadingIndicatorOff } from "./loading_indicator.js";
 
-let posts = postsForCarousel();
-console.log("this is the posts for carousel: ", posts);
+let currentIndex = 0;
+loadingIndicatorOff();
+updateCarousel();
 
-renderPosts(posts);
+function renderCarouselPosts(index) {
+  const posts = postsForCarousel();
+  const postsToShow = posts.slice(index, index + 3);
+  console.log("This is the first batch: ", postsToShow);
+  clearContainer();
+  renderPosts(postsToShow);
+}
 
-// function letsGo() {
-//   renderPosts(posts);
-//   workingCarousel();
-// }
+function updateCarousel() {
+  renderCarouselPosts(currentIndex);
+}
 
-// letsGo();
+const prevButton = document.querySelector(".carousel-prev");
+const nextButton = document.querySelector(".carousel-next");
 
-// function workingCarousel() {
-//   const prevButton = document.querySelector(".carousel-prev");
-//   const nextButton = document.querySelector(".carousel-next");
-//   const carousel = document.querySelector(".carousel-home");
-//   let scrollAmount = 0;
-//   const maxScroll = -carousel.scrollWidth + carousel.offsetWidth;
+prevButton.addEventListener("click", function () {
+  if (currentIndex > 0) {
+    currentIndex -= 3;
+  } else {
+    currentIndex = 9;
+  }
+  updateCarousel();
+});
 
-//   nextButton.addEventListener("click", () => {
-//     carousel.scrollTo({
-//       top: 0,
-//       left: (scrollAmount -= carousel.offsetWidth / 1),
-//       behavior: "smooth",
-//     });
-
-//     if (scrollAmount < maxScroll) {
-//       scrollAmount = maxScroll;
-//     }
-//   });
-
-//   prevButton.addEventListener("click", () => {
-//     carousel.scrollTo({
-//       top: 0,
-//       left: (scrollAmount += carousel.offsetWidth / 1),
-//       behavior: "smooth",
-//     });
-//     console.log("this also works");
-//     if (scrollAmount > 0) {
-//       scrollAmount = 0;
-//     }
-//   });
-// }
+nextButton.addEventListener("click", function () {
+  if (currentIndex < 9) {
+    currentIndex += 3;
+  } else {
+    currentIndex = 0;
+  }
+  updateCarousel();
+});
