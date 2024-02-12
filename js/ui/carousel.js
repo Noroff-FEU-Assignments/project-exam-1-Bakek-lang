@@ -3,8 +3,6 @@ import { clearContainer, renderPosts } from "../renderHTML/render_posts.js";
 import { loadingIndicatorOff } from "./loading_indicator.js";
 
 let currentIndex = 0;
-loadingIndicatorOff();
-updateCarousel();
 
 function renderCarouselPosts(index) {
   const posts = postsForCarousel();
@@ -14,8 +12,9 @@ function renderCarouselPosts(index) {
   renderPosts(postsToShow);
 }
 
-function updateCarousel() {
+export function updateCarousel() {
   renderCarouselPosts(currentIndex);
+  loadingIndicatorOff();
 }
 
 const prevButton = document.querySelector(".carousel-prev");
