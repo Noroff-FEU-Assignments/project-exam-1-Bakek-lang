@@ -20,20 +20,22 @@ export function updateCarousel() {
 const prevButton = document.querySelector(".carousel-prev");
 const nextButton = document.querySelector(".carousel-next");
 
-prevButton.addEventListener("click", function () {
-  if (currentIndex > 0) {
-    currentIndex -= 3;
-  } else {
-    currentIndex = 9;
-  }
-  updateCarousel();
-});
+if (prevButton && nextButton) {
+  prevButton.addEventListener("click", function () {
+    if (currentIndex > 0) {
+      currentIndex -= 3;
+    } else {
+      currentIndex = 9;
+    }
+    updateCarousel();
+  });
 
-nextButton.addEventListener("click", function () {
-  if (currentIndex < 9) {
-    currentIndex += 3;
-  } else {
-    currentIndex = 0;
-  }
-  updateCarousel();
-});
+  nextButton.addEventListener("click", function () {
+    if (currentIndex < 9) {
+      currentIndex += 3;
+    } else {
+      currentIndex = 0;
+    }
+    updateCarousel();
+  });
+}
