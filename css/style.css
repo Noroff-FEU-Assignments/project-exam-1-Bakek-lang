@@ -959,6 +959,16 @@ textarea::placeholder {
   cursor: pointer;
 }
 
+.blog-content-breakdown h2 {
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about-article h1 {
+  font-size: 1.7rem;
+}
+
 /* Media */
 
 /* post-page */
