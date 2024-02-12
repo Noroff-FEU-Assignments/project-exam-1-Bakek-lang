@@ -10,27 +10,19 @@ import { loadingIndicatorOff } from "./ui/loading_indicator.js";
 const url = window.location.href;
 let data = onlyBooks();
 
+hamburgerMenu();
+
 if (url.includes("about")) {
   updateCategoriesDOM();
-  hamburgerMenu();
 }
 if (url.includes("books")) {
   startContent();
   sortOptions();
-  hamburgerMenu();
 }
 if (url.includes("post")) {
   handlePostPage();
-  hamburgerMenu();
 }
 if (url.includes("behind")) {
   renderDiscoverMore(data);
   loadingIndicatorOff();
-  hamburgerMenu();
-}
-if (url.includes("index")) {
-  hamburgerMenu();
-}
-if (url.includes("contact")) {
-  hamburgerMenu();
 }
