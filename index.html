@@ -14,16 +14,21 @@
     <script type="module" src="js/ui/carousel.js"></script>
     <title>Code Corner</title>
     <!-- Hotjar Tracking Code for https://code-corner-pe1.netlify.app/ -->
-<script>
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:3861605,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3861605, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
   </head>
   <body>
     <div class="modal-overlay"></div>
@@ -85,16 +90,15 @@
         </div>
         <aside class="behind-the-scenes">
           <h2>Behind the Scenes</h2>
-          <a href="behind.html">
-            <article class="behind-the-scenes-card">
+          <article class="behind-the-scenes-card">
+            <a href="behind.html" aria-label="Open article">
               <img
                 class="scenes-img"
                 src="images/matt_corner_wide.webp"
                 alt="Matt Corner with computers"
               />
               <h3>The Journey of Code Corner: From Idea to Reality</h3>
-
-          </a>
+            </a>
             <div class="author-information">
               <img
                 class="author-image"
@@ -117,8 +121,12 @@
             <div></div>
           </div>
         </div>
-        <button class="carousel-prev"><i class="fa-solid fa-arrow-left"></i></button>
-        <button class="carousel-next"><i class="fa-solid fa-arrow-right"></i></button>
+        <button class="carousel-prev" aria-label="previous button">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button class="carousel-next" aria-label="next button">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
       </section>
     </main>
     <footer>
@@ -127,7 +135,10 @@
         <p class="copyright">
           <i class="fa-regular fa-copyright"></i>2024 Code Corner
         </p>
-        <a href="https://github.com/Noroff-FEU-Assignments/project-exam-1-Bakek-lang" target="_blank"
+        <a
+          href="https://github.com/Noroff-FEU-Assignments/project-exam-1-Bakek-lang"
+          target="_blank"
+          aria-label="Link to Github repository"
           ><i class="fa-brands fa-github github"></i
         ></a>
       </div>
