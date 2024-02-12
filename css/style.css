@@ -796,7 +796,7 @@ textarea::placeholder {
 }
 
 .home-h1 {
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .behind-the-scenes h2 {
@@ -1084,7 +1084,8 @@ textarea::placeholder {
     margin-right: 20px;
   }
 
-  .home-h1 {
+  .home-h1,
+  .about-author-h2 {
     margin-left: 20px;
   }
 }
