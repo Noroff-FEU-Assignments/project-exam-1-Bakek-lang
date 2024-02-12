@@ -66,7 +66,6 @@ footer {
   padding: 10px;
   max-width: 1150px;
   margin: 0 auto;
-  width: 100%;
 }
 
 .container img {
@@ -102,6 +101,7 @@ nav ul li {
   display: flex;
   align-items: center;
   margin-left: 20px;
+  margin-right: 20px;
 }
 /* icons */
 .nav-icon {
@@ -111,6 +111,7 @@ nav ul li {
 
 .github {
   font-size: 40px;
+  margin-right: 20px;
 }
 
 .copyright {
@@ -378,11 +379,11 @@ section h1 {
 }
 
 .paragraph-content {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .paragraph-title {
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .post-specific-image-container {
@@ -829,6 +830,7 @@ textarea::placeholder {
 .behind-img {
   width: 100%;
   border: solid black;
+  box-sizing: border-box;
 }
 
 /* carousel */
@@ -950,7 +952,142 @@ textarea::placeholder {
   text-align: center;
 }
 
+/* hamburger */
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
 /* Media */
+
+/* post-page */
+
+@media (max-width: 1150px) {
+  main {
+    width: initial;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .sort-container {
+    width: 100%;
+  }
+
+  /* tags */
+  .sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .tags-list-check {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .content-area {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .authors-corner-layout p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 508px) {
+  .authors-corner-layout {
+    flex-direction: column;
+  }
+
+  .authors-corner-layout img {
+    align-self: flex-start;
+  }
+
+  .authors-corner-layout p {
+    margin: 0;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  .github {
+    margin: 0;
+  }
+
+  .container-footer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 850px) {
+  .hamburger-menu {
+    display: block;
+    margin-right: 20px;
+    font-size: 40px;
+    z-index: 100;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    background-color: white;
+    z-index: 99;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    padding-top: 90px; /* Adjust based on your header's height */
+  }
+
+  nav ul li {
+    margin: 10px 35px;
+  }
+
+  .post-main {
+    flex-direction: column;
+  }
+
+  .discover-more {
+    align-self: center;
+  }
+
+  /* tags */
+  /* .sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .tags-list-check {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .content-area {
+    flex-direction: column;
+  } */
+}
+
+/* homepage */
+@media (max-width: 1000px) {
+  .authors-corner-info,
+  .behind-the-scenes {
+    max-width: 100%;
+    flex-basis: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .home-h1 {
+    margin-left: 20px;
+  }
+}
 
 @media (max-width: 700px) {
   .about-article,
@@ -981,20 +1118,24 @@ textarea::placeholder {
     width: 135px;
   }
 
-  /* tag / category bar */
-  .sidebar {
-    flex-direction: row;
-    flex-wrap: wrap;
+  .sort-and-posts .post-card-container {
+    justify-content: center;
+    flex-direction: column;
   }
 
-  .tags-list-check {
+  .sort-container {
+    width: initial;
+    align-self: center;
+  }
+}
+
+@media (max-width: 1025px) {
+  .sort-container {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .authors-corner-info,
-  .behind-the-scenes {
-    max-width: 100%;
-    flex-basis: 100%;
+  .sort-and-posts .post-card-container {
+    justify-content: center;
   }
 }

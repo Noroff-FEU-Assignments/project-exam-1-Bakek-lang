@@ -9,7 +9,6 @@ async function fetchData() {
 }
 
 function findCorrectPost(data) {
-  console.log("L safari");
   const queryString = document.location.search;
   const params = new URLSearchParams(queryString);
   const id = params.get("id");
@@ -166,7 +165,6 @@ function renderPost(data) {
 }
 
 export async function handlePostPage() {
-  console.log("jeg hater safari");
   const data = await fetchData();
   const postData = await findCorrectPost(data);
   renderPost(postData);
