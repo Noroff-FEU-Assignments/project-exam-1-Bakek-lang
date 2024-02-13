@@ -12,12 +12,14 @@ export function hamburgerMenu() {
       icon.classList.remove("fa-xmark");
       icon.classList.add("fa-bars");
       body.classList.remove("freeze-screen");
+      hamburger.setAttribute("aria-label", "Open menu");
     } else {
       nav.style.width = "60%";
       overlay.style.display = "block";
       icon.classList.remove("fa-bars");
       icon.classList.add("fa-xmark");
       body.classList.add("freeze-screen");
+      hamburger.setAttribute("aria-label", "Close menu");
     }
   });
 }
