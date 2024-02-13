@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/d59adeadcb.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="images/logo.svg" type="image/x-icon" />
+    <script type="module" src="js/main.js"></script>
+    <title>Code Corner</title>
+    <!-- Hotjar Tracking Code for https://code-corner-pe1.netlify.app/ -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3861605, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+  </head>
+  <body>
+    <div class="modal-overlay"></div>
+    <header>
+      <div class="container">
+        <a href="index.html">
+          <img src="images/logo.svg" alt="Code Corner Logo" />
+        </a>
+        <button class="hamburger-menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav>
+          <ul>
+            <li>
+              <a href="books.html" class="active">
+                <span><i class="fa-solid fa-book nav-icon"></i></span>Books &
+                Tools</a
+              >
+            </li>
+            <li>
+              <a href="about.html">
+                <span><i class="fa-solid fa-user-pen nav-icon"></i></span
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="contact.html">
+                <span><i class="fa-solid fa-envelope nav-icon"></i></span
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h1>Books & Tools</h1>
+      <div class="content-area">
+        <aside class="sidebar">
+          <div class="tags-header">
+            <i class="fa-solid fa-tags"></i>
+            <span>Tags</span>
+          </div>
+          <div class="tags-list-check">
+            <label class="tag-item">
+              <input type="checkbox" value="book" class="tag-check" />
+              <span class="tag book">
+                <span class="tag-name">Book</span>
+              </span>
+            </label>
+            <label class="tag-item">
+              <input type="checkbox" value="tool" class="tag-check" />
+              <span class="tag tool">
+                <span class="tag-name">Tool</span>
+              </span>
+            </label>
+            <label class="tag-item">
+              <input type="checkbox" value="beginner" class="tag-check" />
+              <span class="tag beginner">
+                <span class="tag-name">Beginner</span>
+              </span>
+            </label>
+            <label class="tag-item">
+              <input type="checkbox" value="advanced" class="tag-check" />
+              <span class="tag advanced">
+                <span class="tag-name">Advanced</span>
+              </span>
+            </label>
+            <label class="tag-item">
+              <input type="checkbox" value="javascript" class="tag-check" />
+              <span class="tag javascript">
+                <span class="tag-name">JavaScript</span>
+              </span>
+            </label>
+            <label class="tag-item">
+              <input type="checkbox" value="python" class="tag-check" />
+              <span class="tag python">
+                <span class="tag-name">Python</span>
+              </span>
+            </label>
+            <label class="tag-item">
+              <input type="checkbox" value="css/html" class="tag-check" />
+              <span class="tag css-html">
+                <span class="tag-name">CSS/HTML</span>
+              </span>
+            </label>
+            <label class="tag-item">
+              <input type="checkbox" value="design" class="tag-check" />
+              <span class="tag design">
+                <span class="tag-name">Design</span>
+              </span>
+            </label>
+          </div>
+        </aside>
+
+        <div class="posts-container">
+          <div class="sort-and-posts">
+            <div class="sort-container">
+              <select style="display: none" id="sort-options">
+                <option value="AtoZ">A-Z</option>
+                <option value="ZtoA">Z-A</option>
+                <option value="NewestToOldest">Newest to Oldest</option>
+                <option value="OldestToNewest">Oldest to Newest</option>
+              </select>
+            </div>
+            <div class="post-card-container">
+              <div class="lds-ring">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+
+          <button class="view-more" id="view-more" style="display: none">
+            View More
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container container-footer">
+        <img src="images/logo.svg" alt="Code Corner Logo" />
+        <p class="copyright">
+          <i class="fa-regular fa-copyright"></i>2024 Code Corner
+        </p>
+        <a
+          href="https://github.com/Noroff-FEU-Assignments/project-exam-1-Bakek-lang"
+          target="_blank"
+          aria-label="Link to Github repository"
+          ><i class="fa-brands fa-github github"></i
+        ></a>
+      </div>
+    </footer>
+  </body>
+</html>
