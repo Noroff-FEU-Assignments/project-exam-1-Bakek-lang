@@ -164,6 +164,9 @@ function renderPost(data) {
   titleLink.textContent = data.acf.original_name;
   titleLink.href = data.acf.original_url;
   linkContainer.append(titleLink);
+
+  // change title
+  document.title = "Code Corner |" + " " + data.acf.heading;
 }
 
 export async function handlePostPage() {
