@@ -1026,6 +1026,15 @@ textarea::placeholder {
   .authors-corner-info img {
     max-width: 100%;
   }
+
+  /* logo */
+  .container img {
+    height: 85px;
+  }
+
+  main {
+    margin-top: 116px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -1075,20 +1084,6 @@ textarea::placeholder {
   .discover-more {
     align-self: center;
   }
-
-  /* tags */
-  /* .sidebar {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .tags-list-check {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .content-area {
-    flex-direction: column;
-  } */
 }
 
 /* homepage */
