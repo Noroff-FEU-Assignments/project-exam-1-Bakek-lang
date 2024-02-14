@@ -837,6 +837,9 @@ textarea::placeholder {
   justify-content: center;
   align-items: center;
   position: relative;
+
+  /* fix scrollbar issue */
+  height: 451.6px;
 }
 
 .carousel-home {
@@ -1013,6 +1016,12 @@ textarea::placeholder {
 
   .carousel-home {
     padding: 3px;
+  }
+
+  /* scrollbar issues */
+
+  .carousel-home-container {
+    height: initial;
   }
 }
 
