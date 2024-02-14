@@ -991,6 +991,7 @@ textarea::placeholder {
   .sidebar {
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 0;
   }
 
   .tags-list-check {
@@ -1000,6 +1001,18 @@ textarea::placeholder {
   }
   .content-area {
     flex-direction: column;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .post-card-container {
+    gap: 30px 5px;
+  }
+
+  .carousel-home {
+    padding: 3px;
   }
 }
 
@@ -1099,6 +1112,11 @@ textarea::placeholder {
   .home-h1,
   .about-author-h2 {
     margin-left: 20px;
+  }
+
+  .carousel-home {
+    flex-direction: column;
+    padding: 20px;
   }
 }
 
