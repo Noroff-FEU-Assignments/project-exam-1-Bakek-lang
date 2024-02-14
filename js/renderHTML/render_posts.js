@@ -32,6 +32,7 @@ export function renderPosts(data) {
       const imageBook = document.createElement("img");
       imageBook.className = "post-image-card";
       imageBook.src = `${data[i].acf.review_image}`;
+      imageBook.alt = `${data[i].acf.original_name}`;
       imageContainer.append(imageBook);
 
       const tagDiv = document.createElement("div");
@@ -68,6 +69,7 @@ export function renderPosts(data) {
     const authorImage = document.createElement("img");
     authorImage.className = "author-image";
     authorImage.src = data[i].acf.author_image;
+    authorImage.alt = `Photo of ${data[i].acf.author_name}`;
     authorDiv.append(authorImage);
 
     const authorName = document.createElement("span");
