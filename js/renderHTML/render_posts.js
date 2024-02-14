@@ -47,6 +47,7 @@ export function renderPosts(data) {
       const imageTool = document.createElement("img");
       imageTool.className = "post-image-card-tool";
       imageTool.src = `${data[i].acf.review_image}`;
+      imageTool.alt = `${data[i].acf.original_name}`;
       imageContainer.append(imageTool);
 
       const tagDiv = document.createElement("div");
