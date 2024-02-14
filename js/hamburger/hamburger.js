@@ -29,6 +29,7 @@ overlay.addEventListener("click", function () {
   overlay.style.display = "none";
   icon.classList.remove("fa-xmark");
   icon.classList.add("fa-bars");
+  body.classList.remove("freeze-screen");
 });
 
 function resetNavOnResize() {
