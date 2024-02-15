@@ -1125,7 +1125,7 @@ textarea::placeholder {
 
   .carousel-home {
     flex-direction: column;
-    padding: 20px;
+    padding-top: 20px;
   }
 }
 
