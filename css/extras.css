@@ -135,3 +135,10 @@ a {
   content: "";
   transform: translateY(-50%);
 }
+
+.error {
+  border: 1px solid darkred;
+  padding: 2rem;
+  color: #000;
+  background: rgba(255, 0, 0, 0.1);
+}

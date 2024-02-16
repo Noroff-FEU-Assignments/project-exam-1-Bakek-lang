@@ -45,14 +45,3 @@ export async function submitForm(name, email, subject, message) {
     );
   }
 }
-
-// submitForm();
-
-// const formData = new FormData();
-// formData.append("your-name", "john doe");
-// formData.append("your-email", "john@emila.com");
-// formData.append("your-subject", "hello this is a test subject");
-// formData.append(
-//   "your-message",
-//   "Hello this is a test message that contains a test name, test email, test subject and a test message"
-// );

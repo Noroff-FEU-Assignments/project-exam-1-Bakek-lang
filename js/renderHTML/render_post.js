@@ -1,5 +1,6 @@
 import { onlyBooks } from "../data/data.js";
 import { makeApiCall } from "../data/fetch.js";
+import { displayError } from "../ui/display_error.js";
 import { loadingIndicatorOff } from "../ui/loading_indicator.js";
 import { showModal } from "../ui/modal_form.js";
 import { renderDiscoverMore } from "./render_discover_more.js";
@@ -170,13 +171,27 @@ function renderPost(data) {
 }
 
 export async function handlePostPage() {
-  const data = await fetchData();
-  const postData = await findCorrectPost(data);
-  renderPost(postData);
-  const onlyBooksData = onlyBooks();
-  renderDiscoverMore(onlyBooksData);
-  loadingIndicatorOff();
-  modalPostEvent();
+  try {
+    const data = await fetchData();
+    if (!data || data.length === 0) {
+      throw new Error("No data found.");
+    }
+
+    const postData = findCorrectPost(data);
+    if (!postData) {
+      throw new Error("Post not found.");
+    }
+    renderPost(postData);
+
+    const onlyBooksData = onlyBooks();
+    renderDiscoverMore(onlyBooksData);
+    loadingIndicatorOff();
+    modalPostEvent();
+  } catch (error) {
+    const errorMessage = displayError(error);
+    document.querySelector(".post-container").innerHTML = errorMessage;
+    loadingIndicatorOff();
+  }
 }
 
 //  I NEED THIS FOR THE MODAL

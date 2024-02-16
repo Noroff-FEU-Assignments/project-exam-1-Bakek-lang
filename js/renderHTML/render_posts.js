@@ -1,7 +1,3 @@
-// import { makeApiCall } from "../data/fetch.js";
-
-// let data = await makeApiCall();
-
 import {
   currentPosts,
   filterPostsByTags,
@@ -9,6 +5,7 @@ import {
   getRemainingPosts,
 } from "../data/data.js";
 import { sortPosts } from "../data/data.js";
+import { displayError } from "../ui/display_error.js";
 import { loadingIndicatorOff } from "../ui/loading_indicator.js";
 
 export function renderPosts(data) {
@@ -92,7 +89,6 @@ export function renderPosts(data) {
   postCardContainer.append(fragment);
 }
 
-// renderPosts(data);
 let viewMoreEventAdded = false;
 
 function viewMoreButton() {
@@ -138,14 +134,24 @@ export function sortOptions() {
 }
 
 export function startContent() {
-  let lastSortOption = localStorage.getItem("lastSortOption") || "AtoZ";
+  try {
+    let lastSortOption = localStorage.getItem("lastSortOption") || "AtoZ";
 
-  const sortOptions = document.getElementById("sort-options");
-  sortOptions.value = lastSortOption;
-  sortPosts(lastSortOption);
+    const sortOptions = document.getElementById("sort-options");
+    if (!sortOptions) {
+      throw new Error("Sort options not found.");
+    }
 
-  updatePostsByTags();
-  loadingIndicatorOff();
+    sortOptions.value = lastSortOption;
+    sortPosts(lastSortOption);
+
+    updatePostsByTags();
+    loadingIndicatorOff();
+  } catch (error) {
+    console.error("Error starting content");
+    const errorMessage = displayError(error);
+    document.querySelector("post-card-container").innerHTML = errorMessage;
+  }
 }
 
 export function clearContainer() {
@@ -170,8 +176,6 @@ function updatePostsByTags() {
   sortPosts(sortCriteria);
 
   let postsToShow = getInitialPosts();
-  console.log("This is postsToShow: ", postsToShow);
-  console.log("this is postsToShow: ", postsToShow);
 
   renderPosts(postsToShow);
   viewMoreButton();

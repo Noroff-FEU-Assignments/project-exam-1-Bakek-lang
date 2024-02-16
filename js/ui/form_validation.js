@@ -1,5 +1,4 @@
 import { submitForm } from "../data/contactPOST.js";
-import { showModal } from "./modal_form.js";
 
 function showError(inputElement, message) {
   clearError(inputElement);
@@ -81,25 +80,27 @@ function checkContactForm(event) {
   return true;
 }
 
-document.getElementById("name").addEventListener("blur", checkContactName);
-document.getElementById("email").addEventListener("blur", checkContactEmail);
-document
-  .getElementById("subject")
-  .addEventListener("blur", checkContactSubject);
-document
-  .getElementById("message")
-  .addEventListener("blur", checkContactMessage);
+export function setupFormValidation() {
+  document.getElementById("name").addEventListener("blur", checkContactName);
+  document.getElementById("email").addEventListener("blur", checkContactEmail);
+  document
+    .getElementById("subject")
+    .addEventListener("blur", checkContactSubject);
+  document
+    .getElementById("message")
+    .addEventListener("blur", checkContactMessage);
 
-const contactForm = document.getElementById("contactForm");
+  const contactForm = document.getElementById("contactForm");
 
-contactForm.addEventListener("submit", function (event) {
-  event.preventDefault();
-  if (checkContactForm(event)) {
-    const nameValue = document.getElementById("name").value;
-    const emailValue = document.getElementById("email").value;
-    const subjectValue = document.getElementById("subject").value;
-    const messageValue = document.getElementById("message").value;
-    console.log(nameValue, emailValue, subjectValue, messageValue);
-    submitForm(nameValue, emailValue, subjectValue, messageValue);
-  }
-});
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (checkContactForm(event)) {
+      const nameValue = document.getElementById("name").value;
+      const emailValue = document.getElementById("email").value;
+      const subjectValue = document.getElementById("subject").value;
+      const messageValue = document.getElementById("message").value;
+      console.log(nameValue, emailValue, subjectValue, messageValue);
+      submitForm(nameValue, emailValue, subjectValue, messageValue);
+    }
+  });
+}

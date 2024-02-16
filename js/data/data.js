@@ -65,7 +65,7 @@ export function filterPostsByTags(selectedTags) {
         }
       }
     }
-    console.log("this is filteredPosts now: ", filteredPosts);
+
     currentPosts = filteredPosts;
   }
 }

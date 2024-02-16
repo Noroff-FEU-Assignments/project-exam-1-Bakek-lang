@@ -6,6 +6,7 @@ import { renderDiscoverMore } from "./renderHTML/render_discover_more.js";
 import { handlePostPage, modalPostEvent } from "./renderHTML/render_post.js";
 import { sortOptions, startContent } from "./renderHTML/render_posts.js";
 import { updateCarousel } from "./ui/carousel.js";
+import { setupFormValidation } from "./ui/form_validation.js";
 import { loadingIndicatorOff } from "./ui/loading_indicator.js";
 
 const url = window.location.href;
@@ -34,4 +35,7 @@ if (
   url === "https://code-corner-pe1.netlify.app"
 ) {
   updateCarousel();
+}
+if (url.includes("contact")) {
+  setupFormValidation();
 }
