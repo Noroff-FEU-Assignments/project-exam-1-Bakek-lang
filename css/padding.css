@@ -1,0 +1,52 @@
+/* padding */
+
+.container,
+.container-footer,
+.contact-form input,
+.contact-form textarea,
+.authors-corner-layout,
+.carousel-prev,
+.carousel-next {
+  padding: 10px;
+}
+
+.tags-list,
+.hamburger-menu {
+  padding: 0;
+}
+
+.tag {
+  padding: 3px 6px;
+}
+
+.view-more,
+.submit-button {
+  padding: 10px 20px;
+}
+
+.sort-container {
+  padding: 10px 0px;
+}
+
+#sort-options {
+  padding: 8px 12px;
+}
+
+.contact-form,
+.author-card,
+.carousel-home {
+  padding: 20px;
+}
+
+.home-button,
+.browse-button {
+  padding: 0.75em 1.5em;
+}
+
+.author-information {
+  padding-bottom: 10px;
+}
+
+.line {
+  padding-right: 15px;
+}

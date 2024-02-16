@@ -1,0 +1,52 @@
+/* POSITION */
+
+header,
+.modal-overlay,
+.modal-overlay {
+  position: fixed;
+}
+
+.post-image-container,
+.post-specific-image-container,
+.modal,
+.carousel-home-container {
+  position: relative;
+}
+
+.post-image-card,
+.form-group::after,
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+}
+
+header,
+.modal-overlay {
+  top: 0;
+  left: 0;
+}
+
+.carousel-prev {
+  left: 0;
+}
+
+.carousel-next {
+  right: 0;
+}
+
+.form-group::after {
+  right: 10px;
+}
+
+.post-image-card,
+.form-group::after,
+.modal,
+.carousel-prev,
+.carousel-next {
+  top: 50%;
+}
+
+.post-image-card,
+.modal {
+  left: 50%;
+}

@@ -1,0 +1,160 @@
+/* COLORS */
+
+nav a,
+a,
+.book,
+.tool,
+.javascript,
+.css-html,
+.python {
+  color: #000;
+}
+
+nav ul li a:hover,
+.active {
+  color: #0047ab;
+}
+
+.advanced,
+.design,
+.submit-button,
+.view-more,
+.home-button,
+.browse-button {
+  color: #fff;
+}
+
+.beginner,
+.img-text-layout,
+.text-img-layout {
+  color: #333;
+}
+
+.subheading {
+  color: #737373;
+}
+
+.link-container a {
+  color: blue;
+}
+
+.contact-container {
+  color: #2a4d69;
+}
+
+.error-message,
+.form-group.invalid::after,
+.crossmark {
+  color: red;
+}
+
+.form-group.valid::after {
+  color: green;
+}
+
+.checkmark {
+  color: #4caf50;
+}
+
+/* background-colors */
+.carousel-prev,
+.carousel-next,
+.post-card,
+header,
+footer {
+  background-color: #fff;
+}
+
+.progress-bar {
+  background-color: #555;
+}
+
+.view-more,
+.buttonsOnError,
+.buttonsOnError:hover {
+  background-color: #0047ab;
+}
+
+.view-more:hover {
+  background-color: #00337b;
+}
+
+.contact-form {
+  background-color: #e6e6e6;
+}
+
+.author-card {
+  background-color: #dae8fc;
+}
+
+.submit-button {
+  background-color: #0056b3;
+}
+
+.home-button,
+.browse-button {
+  background-color: #4caf50;
+}
+
+.home-button:hover,
+.browse-button:hover {
+  background-color: #45a049;
+}
+
+.img-text-layout {
+  background-color: #a3cef1;
+}
+
+.text-img-layout {
+  background-color: #a8d5ba;
+}
+
+/* tags */
+
+.book {
+  background-color: #1e90ff;
+}
+
+.tool {
+  background-color: #ff8c00;
+}
+
+.beginner {
+  background-color: #add8e6;
+}
+
+.advanced {
+  background-color: #800000;
+}
+
+.javascript {
+  background-color: #f0e70c;
+}
+
+.css-html {
+  background-color: #32cd32;
+}
+
+.design {
+  background-color: #008080;
+}
+
+.python {
+  background-color: #9370db;
+}
+
+/* background */
+
+.hamburger-menu {
+  background: none;
+}
+
+.contact-form input,
+.contact-form textarea,
+.modal {
+  background: #fff;
+}
+
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.4);
+}

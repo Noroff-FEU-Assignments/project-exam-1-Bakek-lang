@@ -1,0 +1,84 @@
+/* border */
+
+header,
+footer {
+  border-top: solid 1px #000;
+  border-bottom: solid 1px #000;
+}
+
+/* radius */
+
+.progress-bar,
+.progress,
+.contact-form,
+.author-card,
+.contact-form input,
+.contact-form textarea,
+.submit-button {
+  border-radius: 10px;
+}
+
+.tag,
+.post-card,
+.post-image-card,
+.wide-image,
+.view-more,
+.modal,
+.home-button,
+.browse-button,
+.authors-corner-info img,
+.scenes-img,
+.dm-post img {
+  border-radius: 5px;
+}
+
+.author-image {
+  border-radius: 55px;
+}
+
+.author-card img {
+  border-radius: 120px;
+}
+
+.book-background,
+.post-image-card-tool {
+  border-radius: 5px 5px 0px 0px;
+}
+
+.authors-corner-layout {
+  border-radius: 8px;
+}
+
+.line {
+  border-right: solid 1px #000;
+}
+
+/* border */
+.post-image-card {
+  border: 5px solid black;
+}
+
+.view-more,
+.home-button,
+.browse-button,
+.hamburger-menu {
+  border: none;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid #5a7d9a;
+}
+
+.modal {
+  border: 10px solid white;
+}
+
+.behind-img {
+  border: solid black;
+}
+
+.carousel-prev,
+.carousel-next {
+  border: 1px solid #ccc;
+}

@@ -1,0 +1,137 @@
+/* EXTRAS */
+
+header {
+  z-index: 100;
+}
+
+.modal {
+  z-index: 11;
+}
+
+.modal-overlay {
+  z-index: 10;
+}
+
+nav ul,
+.tags-list {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.progress-bar,
+.progress {
+  box-shadow: inset 0 0 0 1px #000;
+}
+
+.progress {
+  transition: width 1.5s;
+}
+
+.tag,
+.contact-form h2,
+.button-container,
+.submit-modal,
+.behind-the-scenes-card h3,
+.discover-more h2 {
+  text-align: center;
+}
+
+.buttonsOnError:hover {
+  opacity: 0.8;
+}
+
+.percentage {
+  opacity: 0;
+}
+
+.post-card,
+.dm-post img,
+.wide-image,
+.contact-form,
+.author-card {
+  box-shadow: 0px 2px 2px 0px #000;
+}
+
+.wide-image,
+.view-more,
+#sort-options,
+.tag-item,
+.tag-item input,
+.submit-button,
+.home-button,
+.browse-button,
+.carousel-prev,
+.carousel-next,
+.hamburger-menu {
+  cursor: pointer;
+}
+
+.modal .wide-image {
+  cursor: default;
+}
+
+.post-specific-image-container,
+.modal {
+  aspect-ratio: 16 / 9;
+}
+
+.link-container a {
+  text-decoration: underline;
+}
+
+.home-button,
+.browse-button {
+  transition: background-color 0.3s ease;
+}
+
+.authors-corner-layout {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-img-layout {
+  flex-direction: row-reverse;
+}
+
+.behind-the-scenes {
+  flex-basis: 40%;
+}
+
+.behind-img {
+  box-sizing: border-box;
+}
+
+.carousel-home-container,
+.carousel-home {
+  overflow: hidden;
+}
+
+.carousel-home {
+  flex-wrap: nowrap;
+}
+
+.carousel-prev,
+.carousel-next {
+  transform: translateY(-50%);
+}
+
+.discover-more {
+  flex-shrink: 0;
+}
+
+.hamburger-menu {
+  outline: none;
+}
+
+.form-group.valid::after {
+  content: "\2713 ";
+}
+
+.form-group.invalid::after {
+  content: "\2717 ";
+}
+.form-group::after {
+  content: "";
+  transform: translateY(-50%);
+}

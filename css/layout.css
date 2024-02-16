@@ -1,0 +1,199 @@
+/* LAYOUT */
+
+/* width */
+
+header,
+footer,
+.progress-bar,
+.tag-span,
+.book-background,
+.post-container,
+.wide-image,
+.post-specific-image-container,
+.modal,
+.modal-overlay,
+.scenes-img,
+.behind-img,
+.dm-post {
+  width: 100%;
+}
+
+.buttons-modal {
+  width: 80%;
+}
+
+.about-article {
+  width: 60%;
+}
+
+.blog-content-breakdown {
+  width: 40%;
+}
+
+.post-card,
+.post-image-container,
+.post-image-card-tool {
+  width: 325px;
+}
+
+.post-card h3 {
+  width: 306px;
+}
+
+.discover-more {
+  width: 245px;
+}
+
+.author-card img {
+  width: 211px;
+}
+
+.tag {
+  width: 84px;
+}
+
+.author-image {
+  width: 33px;
+}
+
+.progress {
+  width: 0;
+}
+
+.post-image-card,
+.dm-post img {
+  width: auto;
+}
+
+/* max-width */
+
+.dm-post img {
+  max-width: 84px;
+}
+
+.authors-corner-info img {
+  max-width: 200px;
+}
+
+.post-container {
+  max-width: 905px;
+}
+
+.post-card-container {
+  max-width: 1009px;
+}
+
+.container,
+.modal {
+  max-width: 1150px;
+}
+
+.submit-modal {
+  max-width: 50%;
+}
+
+.post-image-card {
+  max-width: 80%;
+}
+
+.modal-image,
+.behind-the-scenes-card,
+.carousel-home-container {
+  max-width: 100%;
+}
+
+/* height */
+
+.container img {
+  height: 110px;
+}
+
+.container-footer img {
+  height: 85px;
+}
+
+.progress-bar {
+  height: 25px;
+}
+
+.progress,
+.book-background,
+.modal-overlay,
+.freeze-screen,
+.height-adjustment,
+.dm-post img {
+  height: 100%;
+}
+
+.author-image {
+  height: 33px;
+}
+
+.post-card h3,
+.contact-form textarea {
+  height: 103px;
+}
+
+.post-image-container,
+.post-image-card-tool {
+  height: 168px;
+}
+
+.post-image-card {
+  height: 80%;
+}
+
+.contact-form,
+.author-card,
+.scenes-img {
+  height: auto;
+}
+
+.carousel-home-container {
+  height: 451.6px;
+}
+
+.post-image-card {
+  max-height: 80%;
+}
+
+.form-modal {
+  max-height: 70%;
+}
+
+.author-card {
+  max-height: 600px;
+}
+
+/* gap */
+
+.post-card-container {
+  gap: 30px 15px;
+}
+
+.div-tag-post,
+.content-area {
+  gap: 10px;
+}
+
+.author-information {
+  gap: 15px;
+}
+
+.link-container,
+.submit-modal {
+  gap: 20px;
+}
+
+nav ul,
+.contact-container {
+  gap: 40px;
+}
+
+.authors-corner {
+  gap: 42px;
+}
+
+.about-page {
+  gap: 50px;
+}

@@ -1,0 +1,135 @@
+/* margin */
+
+.container,
+.posts-container {
+  margin: 0 auto;
+}
+
+.subheading + .author-information,
+.post-card h3,
+.post-container h1,
+.contact-form h2,
+.submit-modal h2,
+.submit-modal h3,
+.submit-modal p,
+.hamburger-menu {
+  margin: 0;
+}
+
+.authors-corner-layout p {
+  margin: 0px 20px;
+}
+
+.behind-the-scenes .author-information {
+  margin-left: 0;
+}
+
+.author-information,
+.tag-posts,
+.post-card h3,
+.form-group.valid::after,
+.dm-post h3 {
+  margin-left: 10px;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+.discover-more {
+  margin-left: 30px;
+}
+
+.form-group.invalid::after {
+  margin-left: 50px;
+}
+
+.post-card:last-child {
+  margin-right: 0;
+}
+
+.nav-icon {
+  margin-right: 8px;
+}
+
+nav ul li,
+.github {
+  margin-right: 20px;
+}
+
+.latest-posts-h2 {
+  margin-bottom: 0;
+}
+
+.tag-span,
+.error-message {
+  margin-bottom: 5px;
+}
+
+.tag-progress,
+.post-card h3,
+.behind-the-scenes-card h3 {
+  margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+}
+
+.view-more,
+.authors-corner-layout,
+.behind-the-scenes h2 {
+  margin-bottom: 20px;
+}
+
+.contact-container {
+  margin-bottom: 40px;
+}
+
+.dm-post {
+  margin-bottom: 42px;
+}
+
+.about-article,
+.post-card-container,
+.link-container {
+  margin-bottom: 50px;
+}
+
+.behind-the-scenes h2,
+.dm-post h3 {
+  margin-top: 0;
+}
+
+.tag-posts,
+.post-card h3,
+.post-container h1,
+.error-message {
+  margin-top: 5px;
+}
+
+.link-container,
+.tag-item,
+.behind-the-scenes-card h3 {
+  margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-top: 15px;
+}
+
+.div-tag-post,
+.form-group,
+.latest-posts-h2 {
+  margin-top: 20px;
+}
+
+.modal {
+  margin-top: 40px;
+}
+
+.sidebar {
+  margin-top: 50px;
+}

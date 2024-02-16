@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+nav a,
+.copyright,
+.author-card-text,
+.form-group label {
+  font-family: "Montserrat", sans-serif;
+}
+
+p,
+.contact-form input,
+.contact-form textarea,
+input::placeholder,
+textarea::placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+.author-card-text {
+  font-style: normal;
+}
+
+.form-group label,
+.author-card-text {
+  line-height: 28px;
+}
+
+/* font size */
+
+.submit-modal p {
+  font-size: 1rem;
+}
+
+nav a,
+.nav-icon,
+.copyright,
+.submit-modal h3 {
+  font-size: 1.5rem;
+}
+
+section h1,
+.blog-content-breakdown h2,
+.about-article h1 {
+  font-size: 1.7rem;
+}
+
+.submit-modal h2 {
+  font-size: 2rem;
+}
+
+.checkmark,
+.crossmark {
+  font-size: 10rem;
+}
+
+.dm-post h3 {
+  font-size: 15px;
+}
+
+.error-message,
+.author-card-text {
+  font-size: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-size: 18px;
+}
+
+.post-card h3,
+.subheading,
+.paragraph-content,
+.form-group.valid::after,
+.form-group.invalid::after,
+.form-group::after,
+.authors-corner-layout {
+  font-size: 20px;
+}
+
+.paragraph-title,
+.form-group label {
+  font-size: 24px;
+}
+
+.submit-button {
+  font-size: 26px;
+}
+
+.link-container {
+  font-size: 28px;
+}
+
+.behind-the-scenes-card h3,
+.carousel-prev,
+.carousel-next {
+  font-size: 30px;
+}
+
+.post-container h1,
+.contact-form h2 {
+  font-size: 36px;
+}
+
+.github {
+  font-size: 40px;
+}
+.view-more {
+  font-size: 1em;
+}
+
+.subheading {
+  font-weight: 400;
+}
+
+nav a,
+.author-card-text {
+  font-weight: 500;
+}
+
+.post-container h1 {
+  font-weight: 600;
+}

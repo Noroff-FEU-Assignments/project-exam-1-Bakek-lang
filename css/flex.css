@@ -1,0 +1,122 @@
+/* flexgap */
+
+.container,
+main h1,
+nav ul,
+nav ul li,
+.about-page,
+.tag-progress,
+.tag-span,
+.tags-list li,
+.author-information,
+.post-card-container,
+.post-container,
+.div-tag-post,
+.link-container,
+.post-main,
+.posts-container,
+.sort-and-posts,
+.content-area,
+.sidebar,
+.tag-item,
+.contact-container,
+.contact-form,
+.author-card,
+.form-group,
+.submit-modal,
+.buttons-modal,
+.authors-corner,
+.authors-corner-layout,
+.behind-the-scenes-card,
+.carousel-home-container,
+.carousel-home,
+.latest-posts-h2,
+.dm-post,
+.blog-content-breakdown h2 {
+  display: flex;
+}
+
+.container,
+nav ul li,
+.tag-progress,
+.author-information,
+.posts-container,
+.author-card,
+.submit-modal,
+.authors-corner-layout,
+.behind-the-scenes-card,
+.carousel-home-container {
+  align-items: center;
+}
+
+.container,
+.about-page,
+.tag-span,
+.buttons-modal {
+  justify-content: space-between;
+}
+
+main h1,
+.form-modal,
+.home-h1,
+.carousel-home-container,
+.latest-posts-h2,
+.blog-content-breakdown h2 {
+  justify-content: center;
+}
+
+.about-article h1 {
+  justify-content: start;
+}
+
+nav ul,
+.post-card-container,
+.carousel-home {
+  flex-direction: row;
+}
+
+.tags-list li,
+.post-container,
+.posts-container,
+.sort-and-posts,
+.sidebar,
+.contact-form,
+.author-card,
+.form-group,
+.submit-modal,
+.behind-the-scenes-card {
+  flex-direction: column;
+}
+
+.post-container,
+.contact-container {
+  align-items: start;
+}
+
+.sort-and-posts {
+  align-items: flex-end;
+}
+
+.sort-container {
+  align-self: flex-end;
+}
+
+.contact-form,
+.author-card,
+.authors-corner-layout p,
+.authors-corner-info,
+.sidebar {
+  flex: 1;
+}
+
+.posts-container {
+  flex: 9;
+}
+
+.container-footer,
+.post-card-container,
+.content-area,
+.contact-container,
+.authors-corner {
+  flex-wrap: wrap;
+}
