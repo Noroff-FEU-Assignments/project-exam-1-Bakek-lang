@@ -20,7 +20,7 @@ export async function updateCategoriesDOM() {
     const tagList = document.querySelector(".tags-list");
     tagList.removeAttribute("hidden");
     animatedBars();
-    const title = document.querySelector(".blog-content-breakdown h1");
+    const title = document.querySelector(".blog-content-breakdown h2");
     title.textContent += `(offline estimated numbers)`;
   }
 }
