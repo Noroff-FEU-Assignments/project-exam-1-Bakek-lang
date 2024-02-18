@@ -17,7 +17,6 @@ function findCorrectPost(data) {
   const matchingPost = data.find(function (object) {
     return object.id.toString() === id;
   });
-  console.log(matchingPost);
   return matchingPost;
 }
 
@@ -204,8 +203,6 @@ export function modalPostEvent() {
     image.addEventListener("click", function () {
       let element = image;
       let imageSrc = image.src || otherImage.src;
-      console.log("this is the element: ", element);
-      console.log("this is the other image: ", otherImage);
 
       if (image.classList.contains("book-background")) {
         element = otherImage;

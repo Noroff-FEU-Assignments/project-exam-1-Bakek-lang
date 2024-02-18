@@ -73,7 +73,6 @@ function checkContactForm(event) {
   const messageCheck = checkContactMessage();
 
   if (!nameCheck || !emailCheck || !subjectCheck || !messageCheck) {
-    console.error("Her mangler du noe");
     event.preventDefault();
     return false;
   }
@@ -99,7 +98,6 @@ export function setupFormValidation() {
       const emailValue = document.getElementById("email").value;
       const subjectValue = document.getElementById("subject").value;
       const messageValue = document.getElementById("message").value;
-      console.log(nameValue, emailValue, subjectValue, messageValue);
       submitForm(nameValue, emailValue, subjectValue, messageValue);
     }
   });

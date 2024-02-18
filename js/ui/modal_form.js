@@ -1,32 +1,3 @@
-function modalSuccess() {
-  console.log("yeas");
-}
-
-// export function showModal(contentType, content) {
-//   const body = document.body;
-//   const modalOverlay = document.createElement("div");
-//   modalOverlay.classList.add("modal-overlay");
-//   const modal = document.createElement("div");
-//   modal.classList.add("modal");
-//   modalOverlay.append(modal);
-//   body.append(modalOverlay);
-
-//   if (contentType === "image") {
-//     modal.innerHTML = `<img src="${content}" class="modal-image" alt="Modal Image">`;
-//   } else if (contentType === "text") {
-//     modal.innerHTML = `<p>${content}</p>`;
-//   }
-//   modalOverlay.style.display = "block";
-//   modal.style.display = "flex";
-
-//   // add hideModal so it can access the dynamically added elements
-
-//   modalOverlay.addEventListener("click", function (event) {
-//     if (event.target === modalOverlay) {
-//       hideModal(modalOverlay);
-//     }
-//   });
-// }
 export function showModal(options, success = true) {
   const body = document.body;
   body.classList.add("freeze-screen");
@@ -43,7 +14,7 @@ export function showModal(options, success = true) {
       const img = document.createElement("img");
       img.src = options.element.src;
       img.className = "modal-image";
-      // change some styling on the modal
+      // change some styling on the modal for tools
       modal.style.aspectRatio = "unset";
       modal.style.justifyContent = "center";
       modal.append(img);
@@ -63,7 +34,7 @@ export function showModal(options, success = true) {
   }
 
   if (options.contentType === "text") {
-    // Success modal after contact form
+    // Success modal and error modal after contact form
     modal.classList.add("form-modal");
 
     const successDiv = document.createElement("div");

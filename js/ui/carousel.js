@@ -7,7 +7,6 @@ let currentIndex = 0;
 function renderCarouselPosts(index) {
   const posts = postsForCarousel();
   const postsToShow = posts.slice(index, index + 3);
-  console.log("This is the first batch: ", postsToShow);
   clearContainer();
   renderPosts(postsToShow);
 }

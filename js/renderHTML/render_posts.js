@@ -97,13 +97,6 @@ function viewMoreButton() {
 
   const displayedPostCount = document.querySelectorAll(".post-card").length;
 
-  console.log(
-    "This is allPostsCount: ",
-    allPostsCount,
-    "And this is the displayedPostCount: ",
-    displayedPostCount
-  );
-
   if (displayedPostCount < allPostsCount) {
     viewMore.style.display = "block";
   } else {
@@ -148,7 +141,6 @@ export function startContent() {
     updatePostsByTags();
     loadingIndicatorOff();
   } catch (error) {
-    console.error("Error starting content");
     const errorMessage = displayError(error);
     document.querySelector("post-card-container").innerHTML = errorMessage;
   }
@@ -161,11 +153,9 @@ export function clearContainer() {
 
 function updatePostsByTags() {
   let selectedTags = [];
-  console.log("SelectedTags typeof: ", typeof selectedTags);
   let checkboxes = document.querySelectorAll(".tag-check");
   for (let i = 0; i < checkboxes.length; i++) {
     if (checkboxes[i].checked) {
-      console.log(checkboxes[0]);
       selectedTags.push(checkboxes[i].value);
     }
   }

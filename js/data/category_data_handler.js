@@ -20,7 +20,6 @@ export function creatingCategoryCounter(category_data) {
   // calculating percentages
   Object.keys(categoryCounts).forEach((tagName) => {
     let count = categoryCounts[tagName];
-    console.log(count);
     let percentage = (count / totalPosts) * 100;
     categoryCounts[tagName] = percentage;
   });

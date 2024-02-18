@@ -55,8 +55,6 @@ export function renderDiscoverMore(data) {
       discoverMoreContainer.append(anchor);
     }
   } catch (error) {
-    console.error(error);
-
     const errorMessageHtml = displayError(error);
     document.querySelector(".discover-more-container").innerHTML =
       errorMessageHtml;
@@ -64,7 +62,6 @@ export function renderDiscoverMore(data) {
 }
 
 let data = onlyBooks();
-console.log(data);
 
 export function discoverMore() {
   renderDiscoverMore(data);
